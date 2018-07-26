@@ -21,6 +21,8 @@ end
 def valid_phone_number?(phone)
   all_digits = phone.scan(/\d/)
   all_digits.length == 10? true:false
+  phone.match(/([0-9] *?){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)/) ? true : false
+
 end
 #valid_numbers = "(718)891-1313"
 #puts valid_phone_number?(valid_numbers)
